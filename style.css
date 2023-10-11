@@ -1,0 +1,103 @@
+body {
+    font-size: 15pt;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background: #0508C0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-app{
+  width: 80%;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px #fff3;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  background: #fff;
+}
+h3{
+  display: flex;
+  font-weight: 600;
+  margin-left: 10px;
+}
+h3 img{
+  width: 25px;
+  height: auto;
+  margin-left: 5px;
+}
+.row{
+  display: flex;
+  border: none;
+  background: #81828424;
+  padding: 5px;
+  border-radius: 7px;
+  outline: none;
+  width: 96%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2px;
+}
+
+input{
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+button{
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #0508C0;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 7px;
+}
+ul li{
+  list-style: none;
+  font-weight: 40px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  transition: .5s ease;
+  font-size: 15px;
+  flex-basis: wrap;
+  
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-image: url(/cicle.png);
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  bottom: 5px;
+  left: -20px;
+}
+ul{
+  position: relative;
+}
+ul li.checked::before{
+  background-image: url(/checked.png);
+}
+span{
+  position: absolute;
+  right: 2px;
+  bottom: 1px;
+  line-height: 14px;
+  width: 15px;
+  height: auto;
+  text-align: center;
+}
+span:hover{
+  background: #81828424;
+  border-radius: 50%;
+}
